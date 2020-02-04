@@ -80,7 +80,9 @@
     printf("\nPeople:\n-------\n");
     for (Person *currPerson in people) {
         [currPerson display];
-    }
+    }    
+    
+//    NSLog(@"%@", [people valueForKeyPath:@"@distinctUnionOfObjects.rating"]);
     
     NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"rating" ascending:NO];
     NSArray *sortedPeeps = [people sortedArrayUsingDescriptors:@[sortDesc]];
