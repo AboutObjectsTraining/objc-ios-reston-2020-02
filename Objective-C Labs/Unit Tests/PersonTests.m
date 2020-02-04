@@ -38,9 +38,7 @@
                                             lastName:@"Smith"
                                                  age:32];
     NSLog(@"%@", [fred fullName]);
-    
     NSLog(@"%@", [fred description]);
-    
     NSLog(@"%@", fred);
 }
 
@@ -84,9 +82,7 @@
         [currPerson display];
     }
     
-    NSSortDescriptor *sortDesc = [NSSortDescriptor
-                                  sortDescriptorWithKey:@"rating"
-                                  ascending:NO];
+    NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"rating" ascending:NO];
     NSArray *sortedPeeps = [people sortedArrayUsingDescriptors:@[sortDesc]];
     
     printf("\nSorted People:\n--------------\n");
@@ -110,12 +106,9 @@
         [currPerson display];
     }
     
-    NSArray *descriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"rating"
-                                                           ascending:NO],
-                             [NSSortDescriptor sortDescriptorWithKey:@"lastName"
-                                                           ascending:YES],
-                             [NSSortDescriptor sortDescriptorWithKey:@"firstName"
-                                                           ascending:YES]];
+    NSArray *descriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"rating" ascending:NO],
+                             [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES],
+                             [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES]];
     NSArray *sortedPeeps = [people sortedArrayUsingDescriptors:descriptors];
     
     printf("\nSorted People:\n--------------\n");
