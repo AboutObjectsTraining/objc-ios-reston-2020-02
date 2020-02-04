@@ -220,7 +220,7 @@
 		ABD09A3B1811EBC800608546 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "About Objects";
 				TargetAttributes = {
 					ABD09A5A1811ECF600608546 = {
@@ -413,6 +413,7 @@
 		ABD09A521811EBC800608546 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Objective-C Labs/Objective-C Labs-Prefix.pch";
@@ -424,6 +425,7 @@
 		ABD09A531811EBC800608546 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Objective-C Labs/Objective-C Labs-Prefix.pch";
