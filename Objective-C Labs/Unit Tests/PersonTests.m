@@ -8,9 +8,18 @@
 
 @implementation PersonTests
 
+- (void)testArrayInitialization {
+    NSError *error;
+    NSURL *myURL = [NSURL fileURLWithPath:@"/tmp/foobar.plist"];
+    NSArray *newArray = [[NSArray alloc] initWithContentsOfURL:myURL error:&error];
+    if (newArray == nil) {
+        NSLog(@"Oh, crap!, error was %@", error);
+    }
+    NSLog(@"%@", newArray);
+}
+
 - (void)testForwarding {
-    Person *fred = [Person personWithFirstName:@"Fred"
-                                      lastName:@"Smith" age:42];
+    Person *fred = [Person personWithFirstName:@"Fred" lastName:@"Smith" age:42];
     fred.dog = [[Dog alloc] initWithName:@"Rover"];
     
     [(id)fred bark];
@@ -39,6 +48,13 @@
     NSLog(@"%@", [fred fullName]);
     NSLog(@"%@", [fred description]);
     NSLog(@"%@", fred);
+    
+    if ([fred conformsToProtocol:@protocol(NSCopying)]) {
+        Person *fred2 = [fred copy];
+        NSLog(@"%@", fred2);
+    }
+//    [fred copyWithZone:nil];
+//    [fred performSelector:@selector(copyWithZone:) withObject:nil];
 }
 
 - (void)testPart03

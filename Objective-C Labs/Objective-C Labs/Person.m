@@ -1,6 +1,11 @@
 #import "Person.h"
+#import "Dog.h"
 
 @implementation Person
+
+- (id)copyWithZone:(NSZone *)zone {
+    return self;
+}
 
 - (id)forwardingTargetForSelector:(SEL)aSelector {
     return self.dog;
@@ -32,7 +37,9 @@
                lastName:(NSString *)lastName
                     age:(int)age
 {
-    if (!(self = [super init])) return nil;
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    self = [super init];
+//    if (!(self = [super init])) return nil;
     
     _firstName = [firstName copy];
     _lastName = [lastName copy];

@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 @class Dog;
 
-@interface Person : NSObject
+@interface Person : NSObject <NSCopying>
 {
     NSString *_firstName;
     NSString *_lastName;
