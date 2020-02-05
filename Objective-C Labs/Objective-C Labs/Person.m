@@ -2,6 +2,10 @@
 
 @implementation Person
 
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    return self.dog;
+}
+
 - (NSString *)firstName {
     return _firstName;
 }

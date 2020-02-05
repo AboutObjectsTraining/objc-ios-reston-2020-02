@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+@class Dog;
 
 @interface Person : NSObject
 {
@@ -6,6 +7,8 @@
     NSString *_lastName;
     int _age;
 }
+
+@property (strong, nonatomic) Dog *dog;
 
 - (NSString *)firstName;
 - (void)setFirstName:(NSString *)newValue;

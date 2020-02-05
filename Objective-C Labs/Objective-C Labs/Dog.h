@@ -34,4 +34,7 @@
 - (void)sit;
 ////////
 
+- (void)bark;
+
+
 @end

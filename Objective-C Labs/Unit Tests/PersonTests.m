@@ -1,5 +1,6 @@
 #import "AOITestCase.h"
 #import "Person.h"
+#import "Dog.h"
 
 @interface PersonTests : AOITestCase
 @end
@@ -7,14 +8,12 @@
 
 @implementation PersonTests
 
-- (void)setUp
-{
-    [super setUp];
-}
-
-- (void)tearDown
-{
-    [super tearDown];
+- (void)testForwarding {
+    Person *fred = [Person personWithFirstName:@"Fred"
+                                      lastName:@"Smith" age:42];
+    fred.dog = [[Dog alloc] initWithName:@"Rover"];
+    
+    [(id)fred bark];
 }
 
 - (void)testPart01
