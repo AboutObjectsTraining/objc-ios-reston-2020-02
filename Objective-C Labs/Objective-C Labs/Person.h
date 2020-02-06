@@ -1,30 +1,26 @@
 #import <Foundation/Foundation.h>
 @class Dog;
 
+struct Keys {
+    NSString __unsafe_unretained * const firstName;
+};
+
 @interface Person : NSObject <NSCopying>
-{
-    NSString *_firstName;
-    NSString *_lastName;
-    int _age;
-}
 
+@property (class, nonatomic) NSString *defaultName;
+
+@property (getter=isHipster, nonatomic) BOOL hipster;
 @property (strong, nonatomic) Dog *dog;
-
-- (NSString *)firstName;
-- (void)setFirstName:(NSString *)newValue;
-
-- (NSString *)lastName;
-- (void)setLastName:(NSString *)newValue;
-
-- (int)age;
-- (void)setAge:(int)newValue;
+@property (copy, nonatomic) NSString *firstName;
+@property (copy, nonatomic) NSString *lastName;
+@property (readonly, nonatomic) NSString *fullName;
+@property (assign, nonatomic) NSInteger age;
 
 //// Part 2
 - (id)initWithFirstName:(NSString *)firstName
                lastName:(NSString *)lastName
                     age:(int)age;
 
-- (NSString *)fullName;
 
 ////
 
@@ -40,12 +36,13 @@
 
 //// Part 4
 @interface Person ()
-{
-    NSUInteger _rating;
-}
-
-- (NSUInteger)rating;
-- (void)setRating:(NSUInteger)newValue;
+@property (assign, nonatomic) NSUInteger rating;
+//{
+//    NSUInteger _rating;
+//}
+//
+//- (NSUInteger)rating;
+//- (void)setRating:(NSUInteger)newValue;
 
 - (NSString *)ratingStars;
 

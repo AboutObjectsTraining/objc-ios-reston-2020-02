@@ -84,9 +84,12 @@
 
 - (void)testPart04
 {
-    NSArray *people = [self people];
+    NSArray <Person *> *people = self.people;
     
+    // The following two lines are identical in effect.
+    people[0].rating = 3;
     [people[0] setRating:3];
+    
     [people[1] setRating:999];
     [people[2] setRating:0];
     [people[3] setRating:3];
