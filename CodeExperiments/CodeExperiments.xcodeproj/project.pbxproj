@@ -18,6 +18,7 @@
 		B4CC2BDB23E8BEC700586A5B /* GeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CC2BDA23E8BEC700586A5B /* GeometryTests.m */; };
 		B4CC2BDC23E8BF2700586A5B /* Geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = B4CC2BD923E8BE1100586A5B /* Geometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4CC2BDE23E8C6E600586A5B /* PointerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CC2BDD23E8C6E600586A5B /* PointerTests.m */; };
+		B4CC2C1423EDB50800586A5B /* BlockLiteralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CC2C1323EDB50800586A5B /* BlockLiteralTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		B4CC2BD923E8BE1100586A5B /* Geometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
 		B4CC2BDA23E8BEC700586A5B /* GeometryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeometryTests.m; sourceTree = "<group>"; };
 		B4CC2BDD23E8C6E600586A5B /* PointerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointerTests.m; sourceTree = "<group>"; };
+		B4CC2C1323EDB50800586A5B /* BlockLiteralTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockLiteralTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B4CC2BC323E87F9400586A5B /* CodeExperimentsTests.m */,
 				B4CC2BC523E87F9400586A5B /* Info.plist */,
 				B4CC2BDD23E8C6E600586A5B /* PointerTests.m */,
+				B4CC2C1323EDB50800586A5B /* BlockLiteralTests.m */,
 			);
 			path = CodeExperimentsTests;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CC2BC423E87F9400586A5B /* CodeExperimentsTests.m in Sources */,
+				B4CC2C1423EDB50800586A5B /* BlockLiteralTests.m in Sources */,
 				B4CC2BDB23E8BEC700586A5B /* GeometryTests.m in Sources */,
 				B4CC2BDE23E8C6E600586A5B /* PointerTests.m in Sources */,
 			);

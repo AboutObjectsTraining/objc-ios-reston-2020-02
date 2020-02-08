@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Nd-A8-5Nu">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cool View Controller-->
         <scene sceneID="93Z-r8-oLi">
             <objects>
-                <viewController id="3Nd-A8-5Nu" sceneMemberID="viewController">
+                <viewController id="3Nd-A8-5Nu" customClass="CLNCoolViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e9n-VQ-QIJ" userLabel="Backlground View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,19 +36,42 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="＋"/>
+                                                <connections>
+                                                    <action selector="addCell" destination="3Nd-A8-5Nu" eventType="touchUpInside" id="4gX-Hv-JUq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.49815578531598514" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="Accessory Color"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="640-Y7-F5Q" secondAttribute="bottom" constant="10" id="SIJ-Xp-o36"/>
-                                    <constraint firstAttribute="height" constant="90" id="T07-zV-sY5"/>
+                                    <constraint firstAttribute="height" constant="90" id="T07-zV-sY5">
+                                        <variation key="heightClass=compact" constant="60"/>
+                                    </constraint>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Jl-Ph-WEp" userLabel="Content View">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Jl-Ph-WEp" userLabel="Content View">
                                 <rect key="frame" x="0.0" y="90" width="375" height="722"/>
-                                <color key="backgroundColor" white="1" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8U8-k6-A02" customClass="CLNCoolViewCell">
+                                        <rect key="frame" x="28" y="45" width="202" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello World! 🌍🌎🌏"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vh4-O3-puE" customClass="CLNCoolViewCell">
+                                        <rect key="frame" x="39" y="124" width="325" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Cool Cells FTW!!! 🏆🍺💥"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="Content Color"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,10 +88,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ner-fZ-gg9"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="6Jl-Ph-WEp" id="mXd-s2-rt2"/>
+                        <outlet property="textField" destination="Uov-C9-SgA" id="LF5-eI-Okw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bx-w8-7Bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-109" y="38"/>
+            <point key="canvasLocation" x="-109.59999999999999" y="37.684729064039409"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Accessory Color">
+            <color red="0.85500001907348633" green="0.80400002002716064" blue="0.73500001430511475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Content Color">
+            <color red="0.75294117647058822" green="0.67450980392156867" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

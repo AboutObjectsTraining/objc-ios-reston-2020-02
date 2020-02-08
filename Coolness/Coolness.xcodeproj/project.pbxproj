@@ -12,6 +12,9 @@
 		B4CC2BFD23EB6D1A00586A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CC2BFB23EB6D1A00586A5B /* LaunchScreen.storyboard */; };
 		B4CC2C0023EB6D1A00586A5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CC2BFF23EB6D1A00586A5B /* main.m */; };
 		B4CC2C0A23EC649900586A5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CC2C0923EC649900586A5B /* Main.storyboard */; };
+		B4CC2C0C23EC82F400586A5B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4CC2C0B23EC82F400586A5B /* Colors.xcassets */; };
+		B4CC2C0F23EC989400586A5B /* CLNCoolViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CC2C0E23EC989400586A5B /* CLNCoolViewCell.m */; };
+		B4CC2C1223ECD8C400586A5B /* CLNCoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CC2C1123ECD8C400586A5B /* CLNCoolViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,11 @@
 		B4CC2BFE23EB6D1A00586A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4CC2BFF23EB6D1A00586A5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4CC2C0923EC649900586A5B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B4CC2C0B23EC82F400586A5B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		B4CC2C0D23EC989400586A5B /* CLNCoolViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLNCoolViewCell.h; sourceTree = "<group>"; };
+		B4CC2C0E23EC989400586A5B /* CLNCoolViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLNCoolViewCell.m; sourceTree = "<group>"; };
+		B4CC2C1023ECD8C400586A5B /* CLNCoolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLNCoolViewController.h; sourceTree = "<group>"; };
+		B4CC2C1123ECD8C400586A5B /* CLNCoolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLNCoolViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +65,13 @@
 			children = (
 				B4CC2BED23EB6D1900586A5B /* CLNAppDelegate.h */,
 				B4CC2BEE23EB6D1900586A5B /* CLNAppDelegate.m */,
+				B4CC2C0D23EC989400586A5B /* CLNCoolViewCell.h */,
+				B4CC2C0E23EC989400586A5B /* CLNCoolViewCell.m */,
+				B4CC2C1023ECD8C400586A5B /* CLNCoolViewController.h */,
+				B4CC2C1123ECD8C400586A5B /* CLNCoolViewController.m */,
 				B4CC2C0923EC649900586A5B /* Main.storyboard */,
 				B4CC2BF923EB6D1A00586A5B /* Assets.xcassets */,
+				B4CC2C0B23EC82F400586A5B /* Colors.xcassets */,
 				B4CC2BFB23EB6D1A00586A5B /* LaunchScreen.storyboard */,
 				B4CC2BFE23EB6D1A00586A5B /* Info.plist */,
 				B4CC2BFF23EB6D1A00586A5B /* main.m */,
@@ -124,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CC2C0A23EC649900586A5B /* Main.storyboard in Resources */,
+				B4CC2C0C23EC82F400586A5B /* Colors.xcassets in Resources */,
 				B4CC2BFD23EB6D1A00586A5B /* LaunchScreen.storyboard in Resources */,
 				B4CC2BFA23EB6D1A00586A5B /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CC2BEF23EB6D1900586A5B /* CLNAppDelegate.m in Sources */,
+				B4CC2C0F23EC989400586A5B /* CLNCoolViewCell.m in Sources */,
 				B4CC2C0023EB6D1A00586A5B /* main.m in Sources */,
+				B4CC2C1223ECD8C400586A5B /* CLNCoolViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
